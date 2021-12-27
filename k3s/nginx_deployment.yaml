@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx-na
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-na
+  template:
+    metadata:
+      labels:
+        app: nginx-na
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+          volumeMounts:
+          - name: k3s-persistent-storage
+            mountPath: /var/lib/nginx
+      volumes:
+        - name: k3s-persistent-storage
+          persistentVolumeClaim:
+            claimName: k3s-pv-claim
