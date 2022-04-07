@@ -1,0 +1,28 @@
+expose ip- kubectl expose deployment hello-node --type=LoadBalancer --port=8080
+
+
+kubectl apply -f mysql-deployment.yml
+kubectl get addon -A
+http://192.168.0.155:4001/
+ kubectl port-forward deployment/prometheus-grafana 3000
+Forwarding from 127.0.0.1:3000 -> 3000
+
+docker-compose up --build 
+
+ამის შემდეგ შევქმენი nginx_deployment.yaml ფაილი Nginx ის დაყენებისთვის, 
+შევქმენი nginx_service.yaml დეფლოიმენთ ფაილი Network კონფიგისთვის და nginx_pvc.yamlშევქმენი (Provisioning-ის მიზნით)
+
+
+export PATH=$PATH:/home/nika/Desktop/istio/istio-1.12.1/bin
+export PATH=$PATH:/home/nika/Desktop/istio/istio-1.12.1/bin
+kubectl port-forward svc/kiali -n istio-system 20001
+
+curl http://$INGRESS_HOST:$INGRESS_PORT/status/200
+
+kubectl get node
+kubectl get pod
+NodeJS is a Javascript runtime environment.
+
+kubectl port-forward deployment/prometheus-grafana 3000
+docker-compose up --build 
+kubectl port-forward svc/kiali -n istio-system 20001
